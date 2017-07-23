@@ -1,0 +1,42 @@
+{
+  "name": "benchmarks-test-frameworks",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "npm run jasmine && npm run mocha && npm run jest",
+    "jasmine": "jasmine --config=jasmine.json",
+    "mocha": "mocha --timeout 60000 -s 500 --compilers ts:ts-node/register spec/mocha/**/*.ts",
+    "jest": "jest"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "@types/jasmine": "^2.5.53",
+    "@types/jest": "^20.0.4",
+    "@types/mocha": "^2.2.41",
+    "chai": "^4.1.0",
+    "jasmine": "^2.6.0",
+    "jest": "^20.0.4",
+    "mocha": "^3.4.2",
+    "sinon": "^2.3.8",
+    "ts-jest": "^20.0.7",
+    "ts-node": "^3.2.1",
+    "typescript": "^2.4.2"
+  },
+  "jest": {
+    "transform": {
+      "^.+\\.tsx?$": "<rootDir>/../../node_modules/ts-jest/preprocessor.js"
+    },
+    "testRegex": "(/__tests__/.*|\\.(test|spec))\\.(tsx?|jsx?)$",
+    "rootDir": "spec/jest",
+    "moduleFileExtensions": [
+      "ts",
+      "tsx",
+      "js",
+      "json",
+      "jsx"
+    ]
+  }
+}
